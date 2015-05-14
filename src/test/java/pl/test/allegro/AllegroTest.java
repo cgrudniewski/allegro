@@ -25,6 +25,9 @@ public class AllegroTest {
     @FindBy(xpath = "//form[@id='main-search']/input[@type='submit']")
     private WebElement submitButton;
 
+    @FindBy(id = "main-breadcrumb-search-hits")
+    private WebElement searchHits;
+
     private final String itemToFind = "gitara";
 
     @BeforeMethod
@@ -41,6 +44,14 @@ public class AllegroTest {
         page.navigateTo(driver, baseUrl);
 
         if (!searchItem(page, itemToFind)) {
+            Assert.assertTrue(false);
+        }
+
+        System.out.println("2. Raportowanie w logu:");
+
+        if (page.isElementPresent(searchHits)) {
+            System.out.println("\tIloœci wyszukanych przedmiotów ogó³em : " + searchHits.getText());
+        } else {
             Assert.assertTrue(false);
         }
     }
