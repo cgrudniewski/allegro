@@ -39,6 +39,9 @@ public class AllegroTest {
     @FindBy(xpath = "//label[@for='offerBuy5']/a/span/span")
     private WebElement nrOfUsedItems;
 
+    @FindBy(xpath = "//select[@id='state']/option[@value='7']")
+    private WebElement mazowieckieState;
+
     private final String itemToFind = "gitara";
 
     @BeforeMethod
@@ -77,11 +80,21 @@ public class AllegroTest {
         } else {
             Assert.assertTrue(false);
         }
+
+        if (page.isElementPresent(mazowieckieState)) {
+            page.clickButtonElement(mazowieckieState);
+        } else {
+            Assert.assertTrue(false);
+        }
+
+        System.out.println("3. Po zaraportowaniu powy¿szych parametrów wyœwietlenie wszystkich elementów z lokalizacji: z mazowieckiego - OK");
+
+        Assert.assertTrue(true);
     }
 
     @AfterMethod
     public void tearDown() throws Exception {
-        driver.quit();
+        //driver.quit();
     }
 
     private boolean searchItem(final Page page, final String itemToFind) {
