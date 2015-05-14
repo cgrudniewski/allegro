@@ -33,6 +33,12 @@ public class AllegroTest {
     @FindBy(xpath = "//section[@id='featured-offers']/article")
     private List<WebElement> singlePageItemList;
 
+    @FindBy(xpath = "//label[@for='offerBuy4']/a/span/span")
+    private WebElement nrOfNewItems;
+
+    @FindBy(xpath = "//label[@for='offerBuy5']/a/span/span")
+    private WebElement nrOfUsedItems;
+
     private final String itemToFind = "gitara";
 
     @BeforeMethod
@@ -62,6 +68,12 @@ public class AllegroTest {
 
         if (singlePageItemList != null) {
             System.out.println("\tIloœæ wyœwietlanych przedmiotów na pierwszej stronie: " + singlePageItemList.size());
+        } else {
+            Assert.assertTrue(false);
+        }
+
+        if (page.isElementPresent(nrOfNewItems) && page.isElementPresent(nrOfUsedItems)) {
+            System.out.println("\tIloœæ przedmiotów nowych: " + nrOfNewItems.getText() + " i u¿ywanych: " + nrOfUsedItems.getText());
         } else {
             Assert.assertTrue(false);
         }
