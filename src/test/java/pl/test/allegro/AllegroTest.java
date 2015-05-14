@@ -1,6 +1,8 @@
 package pl.test.allegro;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -16,6 +18,8 @@ public class AllegroTest {
 
     @BeforeMethod
     public void setUp() throws Exception {
+        driver = new FirefoxDriver(FirefoxDriverConf.getFirefoxProfileConfiguration());
+        PageFactory.initElements(driver, this);
     }
 
     @Test
@@ -24,5 +28,6 @@ public class AllegroTest {
 
     @AfterMethod
     public void tearDown() throws Exception {
+        driver.quit();
     }
 }
