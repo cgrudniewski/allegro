@@ -10,6 +10,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 /**
  *
  * Created by Czarek on 2015-05-14.
@@ -27,6 +29,9 @@ public class AllegroTest {
 
     @FindBy(id = "main-breadcrumb-search-hits")
     private WebElement searchHits;
+
+    @FindBy(xpath = "//section[@id='featured-offers']/article")
+    private List<WebElement> singlePageItemList;
 
     private final String itemToFind = "gitara";
 
@@ -51,6 +56,12 @@ public class AllegroTest {
 
         if (page.isElementPresent(searchHits)) {
             System.out.println("\tIloœci wyszukanych przedmiotów ogó³em : " + searchHits.getText());
+        } else {
+            Assert.assertTrue(false);
+        }
+
+        if (singlePageItemList != null) {
+            System.out.println("\tIloœæ wyœwietlanych przedmiotów na pierwszej stronie: " + singlePageItemList.size());
         } else {
             Assert.assertTrue(false);
         }
