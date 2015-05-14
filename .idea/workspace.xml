@@ -39,8 +39,8 @@
       <file leaf-file-name="AllegroTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/pl/test/allegro/AllegroTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5581921">
-              <caret line="96" column="10" selection-start-line="96" selection-start-column="10" selection-end-line="96" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.56497175">
+              <caret line="89" column="55" selection-start-line="89" selection-start-column="55" selection-end-line="89" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -471,7 +471,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431639370942</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="go to mazowiecki state">
+      <created>1431639655479</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1431639655479</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -515,7 +521,8 @@
     <MESSAGE value="finding total number of items" />
     <MESSAGE value="finding number of items on single page" />
     <MESSAGE value="finding number of new and used items" />
-    <option name="LAST_COMMIT_MESSAGE" value="finding number of new and used items" />
+    <MESSAGE value="go to mazowiecki state" />
+    <option name="LAST_COMMIT_MESSAGE" value="go to mazowiecki state" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -562,8 +569,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pl/test/allegro/AllegroTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5581921">
-          <caret line="96" column="10" selection-start-line="96" selection-start-column="10" selection-end-line="96" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.56497175">
+          <caret line="89" column="55" selection-start-line="89" selection-start-column="55" selection-end-line="89" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

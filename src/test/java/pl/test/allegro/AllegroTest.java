@@ -64,19 +64,19 @@ public class AllegroTest {
         System.out.println("2. Raportowanie w logu:");
 
         if (page.isElementPresent(searchHits)) {
-            System.out.println("\tIloœci wyszukanych przedmiotów ogó³em : " + searchHits.getText());
+            System.out.println("\tIlo\u015bci wyszukanych przedmiot\u00f3w og\u00f3\u0142em: " + searchHits.getText());
         } else {
             Assert.assertTrue(false);
         }
 
         if (singlePageItemList != null) {
-            System.out.println("\tIloœæ wyœwietlanych przedmiotów na pierwszej stronie: " + singlePageItemList.size());
+            System.out.println("\tIlo\u015b\u0107 wy\u015bwietlanych przedmiot\u00f3w na pierwszej stronie: " + singlePageItemList.size());
         } else {
             Assert.assertTrue(false);
         }
 
         if (page.isElementPresent(nrOfNewItems) && page.isElementPresent(nrOfUsedItems)) {
-            System.out.println("\tIloœæ przedmiotów nowych: " + nrOfNewItems.getText() + " i u¿ywanych: " + nrOfUsedItems.getText());
+            System.out.println("\tIlo\u015b\u0107 przedmiot\u00f3w nowych: " + nrOfNewItems.getText() + " i u\u017cywanych: " + nrOfUsedItems.getText());
         } else {
             Assert.assertTrue(false);
         }
@@ -87,7 +87,7 @@ public class AllegroTest {
             Assert.assertTrue(false);
         }
 
-        System.out.println("3. Po zaraportowaniu powy¿szych parametrów wyœwietlenie wszystkich elementów z lokalizacji: z mazowieckiego - OK");
+        System.out.println("3. Po zaraportowaniu powy\u017cszych parametr\u00f3w wy\u015bwietlenie wszystkich element\u00f3w z lokalizacji: z mazowieckiego - OK");
 
         Assert.assertTrue(true);
     }
